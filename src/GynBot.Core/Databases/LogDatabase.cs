@@ -1,4 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Doggo
@@ -14,7 +18,11 @@ namespace Doggo
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             var config = ConfigurationBase.Load<ConfigurationBase>();
-            string connection = $"server={config.Server};userid={config.User};pwd={config.Password};port={config.Port};database=logs;";
+            string connection = $"server={config.Server};" +
+                $"userid={config.User};" +
+                $"pwd={config.Password};" +
+                $"port={config.Port};" +
+                $"database=logs;";
             builder.UseMySql(connection);
         }
 
@@ -27,7 +35,10 @@ namespace Doggo
         public Task<DiscordMessage> GetMessageAsync(ulong msgId)
             => Messages.FirstOrDefaultAsync(x => (ulong)x.MessageId == msgId);
 
-        public Task<DiscordReaction> GetReactionAsync(ulong userId, string name)
-            => Reactions.FirstOrDefaultAsync(x => (ulong)x.AuthorId == userId && x.EmojiName == name);
+        public Task<DiscordReaction> GetReactionAsync(ulong msgId, ulong userId, string name)
+            => Reactions.FirstOrDefaultAsync(x => (ulong)x.MessageId == msgId && (ulong)x.AuthorId == userId && x.EmojiName == name);
+
+        public Task<List<DiscordReaction>> GetReactionsAsync(ulong msgId)
+            => Reactions.Where(x => (ulong)x.MessageId == msgId).ToListAsync();
     }
 }

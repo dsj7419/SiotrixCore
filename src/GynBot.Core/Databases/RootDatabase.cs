@@ -16,7 +16,11 @@ namespace Doggo
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             var config = ConfigurationBase.Load<ConfigurationBase>();
-            string connection = $"server={config.Server};userid={config.User};pwd={config.Password};port={config.Port};database=logs;";
+            string connection = $"server={config.Server};" +
+                $"userid={config.User};" +
+                $"pwd={config.Password};" +
+                $"port={config.Port};" +
+                $"database=root;";
             builder.UseMySql(connection);
         }
     }
