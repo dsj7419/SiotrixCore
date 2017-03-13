@@ -9,7 +9,7 @@ namespace Doggo
         [JsonIgnore]
         public static string FileName { get; private set; } = "config/configuration.json";
         public string Server { get; set; } = "localhost";
-        public string Port { get; set; } = "3309";
+        public string Port { get; set; } = "3306";
         public string User { get; set; } = "root";
         public string Password { get; set; } = "";
 
