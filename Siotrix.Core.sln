@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggo.Core", "src\Doggo.Core\Doggo.Core.csproj", "{3E8E272A-993B-4C86-B728-2F329083FBB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siotrix.Core", "src\Siotrix.Core\Siotrix.Core.csproj", "{3E8E272A-993B-4C86-B728-2F329083FBB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

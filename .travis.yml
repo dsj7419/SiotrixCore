@@ -1,5 +1,5 @@
 language: csharp
-solution: Doggo.Core.sln
+solution: Siotrix.Core.sln
 git:
   depth: 1
 branches:

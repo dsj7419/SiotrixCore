@@ -1,4 +1,5 @@
-[![Discord](https://discordapp.com/api/guilds/238721943551868928/widget.png)](https://discord.gg/ZGkMKE4) [![Build Status](https://travis-ci.org/Doggo/Core.svg?branch=master)](https://travis-ci.org/Doggo/Core)  
+# <p align="center"><img src="https://s28.postimg.org/r2qxebtml/Siotrix_Logo_Side_Alt2black.png" /></p>
 
-# Core
-Doggo's core classes and structure
+Siotrix is a [Discord](https://discordapp.com) bot written in C#, and based off of the API [Discord.net](https://discord.foxbot.me/docs/api/index.html)
+
+More information near release...
