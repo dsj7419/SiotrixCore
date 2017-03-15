@@ -8,6 +8,7 @@ namespace Siotrix
     {
         [JsonIgnore]
         public static string FileName { get; private set; } = "config/configuration.json";
+        public string Instance { get; set; } = "siotrix";
         public string Server { get; set; } = "localhost";
         public string Port { get; set; } = "3306";
         public string User { get; set; } = "root";
