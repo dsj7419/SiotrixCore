@@ -18,5 +18,6 @@ namespace Siotrix
         public string Content { get; set; }
         [Required]
         public string Name { get; set; }
+        public bool IsBot { get; set; }
     }
 }
