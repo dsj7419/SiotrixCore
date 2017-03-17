@@ -19,5 +19,7 @@ namespace Siotrix
         [Required]
         public string Name { get; set; }
         public bool IsBot { get; set; }
+        public string GuildName { get; set; }
+        public string ChannelName { get; set; }
     }
 }
