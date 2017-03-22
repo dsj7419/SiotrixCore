@@ -14,6 +14,8 @@ namespace Siotrix
         public DbSet<DiscordReaction> Reactions { get; set; }
         public DbSet<DiscordMembership> Memberships { get; set; }
         public DbSet<DiscordStatus> Statuses { get; set; }
+        public DbSet<DiscordColor> Colors { get; set; }
+        public DbSet<DiscordInfo> Infos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
