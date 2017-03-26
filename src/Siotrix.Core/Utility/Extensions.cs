@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Siotrix
 {
@@ -19,5 +21,26 @@ namespace Siotrix
 
             return convertedNumber;
         }
+
+
+        public static string PrettyPrint(this IEnumerable<string> list) =>
+            string.Join(", ", list.Select(v => $"``{v}``"));
+
+        public static string Cap(this string value, int length) =>
+            value?.Substring(0, Math.Abs(Math.Min(value.Length, length)));
+
+        public static bool ICEquals(this string source, string comparison) =>
+            string.Equals(source, comparison, StringComparison.OrdinalIgnoreCase);
+
+        public static bool ICStartsWith(this string source, string comparison) =>
+            source.StartsWith(comparison, StringComparison.OrdinalIgnoreCase);
+
+        public static string Truncate(this string value, int length) =>       
+            value?.Substring(0, Math.Min(value.Length, value.Length - length));
+
+        public static string RemoveWhitespace(this string input) =>
+            new string(input.ToCharArray()
+                .Where(c => !char.IsWhiteSpace(c))
+                .ToArray());
     }
 }
