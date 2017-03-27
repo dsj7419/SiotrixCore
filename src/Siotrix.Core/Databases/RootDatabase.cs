@@ -10,9 +10,6 @@ namespace Siotrix
         public DbSet<User> Users { get; set; }
         public DbSet<CommunityUser> CommunityUsers { get; set; }
 
-        public DbSet<DiscordGithubConfig> DiscordGithubConfigs { get; set; }
-        public DbSet<DiscordGithubRepo> DiscordGithubRepos { get; set; }
-
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             var config = ConfigurationBase.Load<ConfigurationBase>();
