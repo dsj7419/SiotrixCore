@@ -16,6 +16,7 @@ namespace Siotrix
         public DbSet<DiscordStatus> Statuses { get; set; }
         public DbSet<DiscordColor> Colors { get; set; }
         public DbSet<DiscordInfo> Infos { get; set; }
+        public DbSet<DiscordFooter> footers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
