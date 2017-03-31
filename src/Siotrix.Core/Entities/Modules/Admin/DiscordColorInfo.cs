@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Siotrix
 {
-    public class DiscordColor : Entity
+    public class DiscordColorInfo : Entity
     {
         [Required]
         public int RedParam { get; set; }
