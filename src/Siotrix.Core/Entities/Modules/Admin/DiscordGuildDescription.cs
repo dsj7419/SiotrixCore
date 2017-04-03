@@ -7,5 +7,6 @@ namespace Siotrix
     public class DiscordGuildDescription : Entity
     {
         public string Description { get; set; }
+        public long GuildId { get; set; }
     }
 }

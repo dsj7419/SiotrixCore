@@ -4,10 +4,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Siotrix
 {
-    public class DiscordGuildFooter : Entity
+    public class DiscordGuildAvatar : Entity
     {
-        public string FooterText { get; set; }
-        public string FooterIcon { get; set; }
         public long GuildId { get; set; }
+        public string Avatar { get; set; }
     }
 }

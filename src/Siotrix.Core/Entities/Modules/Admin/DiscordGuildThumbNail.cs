@@ -4,8 +4,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Siotrix
 {
-    public class DiscordThumbNail : Entity
+    public class DiscordGuildThumbNail : Entity
     {
         public string ThumbNail { get; set; }
+        public long GuildId { get; set; }
     }
 }

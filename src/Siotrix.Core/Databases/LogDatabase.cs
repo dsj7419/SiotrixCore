@@ -18,13 +18,14 @@ namespace Siotrix
         public DbSet<DiscordColor> Gcolors { get; set; }
         public DbSet<DiscordGuildFooter> Gfooters { get; set; }
         public DbSet<DiscordAuthor> Authors { get; set; }
-        public DbSet<DiscordThumbNail> Gthumbnails { get; set; }
+        public DbSet<DiscordGuildThumbNail> Gthumbnails { get; set; }
         public DbSet<DiscordGuildSiteUrl> Gwebsiteurls { get; set; }
         public DbSet<DiscordGuildDescription> Gdescriptions { get; set; }
         public DbSet<DiscordGuildName> Gnames { get; set; }
         public DbSet<DiscordSiotrixInfo> Binfos { get; set; }
         public DbSet<DiscordSiotrixSiteUrl> Bwebsiteurls { get; set; }
         public DbSet<DiscordSiotrixFooter> Bfooters { get; set; }
+        public DbSet<DiscordGuildAvatar> Gavatars { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
