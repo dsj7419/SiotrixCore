@@ -26,6 +26,8 @@ namespace Siotrix
         public DbSet<DiscordSiotrixSiteUrl> Bwebsiteurls { get; set; }
         public DbSet<DiscordSiotrixFooter> Bfooters { get; set; }
         public DbSet<DiscordGuildAvatar> Gavatars { get; set; }
+        public DbSet<DiscordGuildPrefix> Gprefixs { get; set; }
+        public DbSet<DiscordGuildMotd> Gmotds { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
