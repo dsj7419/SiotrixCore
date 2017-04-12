@@ -35,8 +35,7 @@ namespace Siotrix
                 set { _b = value; }
             }
 
-            public bool Equals(RGB 
-                )
+            public bool Equals(RGB rgb)
             {
                 return (R == rgb.R) && (G == rgb.G) && (B == rgb.B);
             }
