@@ -47,6 +47,15 @@ namespace Siotrix
             string gs = DecimalToHexadecimal(rgb.G);
             string bs = DecimalToHexadecimal(rgb.B);
 
+            if(rs.Length == 1)
+                rs = '0' + rs;
+
+            if (gs.Length == 1)
+                gs = '0' + gs;
+
+            if (bs.Length == 1)
+                bs = '0' + bs;
+
             return '#' + rs + gs + bs;
         }
 
@@ -60,14 +69,14 @@ namespace Siotrix
 
             while (dec > 0)
             {
-                hex = dec % 16;
+                hex = dec % 16;           
 
                 if (hex < 10)
                     hexStr = hexStr.Insert(0, Convert.ToChar(hex + 48).ToString());
                 else
                     hexStr = hexStr.Insert(0, Convert.ToChar(hex + 55).ToString());
 
-                dec /= 16;
+                dec /= 16;              
             }
 
             return hexStr;
