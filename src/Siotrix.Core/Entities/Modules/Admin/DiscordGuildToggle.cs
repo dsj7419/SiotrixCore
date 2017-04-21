@@ -4,15 +4,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Siotrix
 {
-    public class DiscordCset : Entity
+    public class DiscordGuildToggle : Entity
     {
         [Required]
-        public string Name { get; set; }
-        [Required]
-        public long ChannelId { get; set; }
+        public string CommandName { get; set; }
         [Required]
         public long GuildId { get; set; }
-        [Required]
-        public bool Status { get; set; }
     }
 }

@@ -28,7 +28,8 @@ namespace Siotrix
         public DbSet<DiscordGuildAvatar> Gavatars { get; set; }
         public DbSet<DiscordGuildPrefix> Gprefixs { get; set; }
         public DbSet<DiscordGuildMotd> Gmotds { get; set; }
-        public DbSet<DiscordCset> Gcsets { get; set; }
+        public DbSet<DiscordGuildToggle> Gtoggles { get; set; }
+        public DbSet<DiscordGuildToggleChannel> Gtogglechannels { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
