@@ -1747,8 +1747,7 @@ namespace Siotrix
         public static string ColorHex(string word)
         {
             // Try to get the result in the static Dictionary
-            string result;
-            if (colorHex.TryGetValue(word, out result))
+            if (colorHex.TryGetValue(word, out string result))
             {
                 return result;
             }
@@ -1761,8 +1760,7 @@ namespace Siotrix
         public static string ColorName(string word)
         {
             // Try to get the result in the static Dictionary
-            string result;
-            if (colorName.TryGetValue(word, out result))
+            if (colorName.TryGetValue(word, out string result))
             {
                 return result;
             }
