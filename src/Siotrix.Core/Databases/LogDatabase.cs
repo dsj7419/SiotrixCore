@@ -33,6 +33,7 @@ namespace Siotrix
         public DbSet<DiscordLogChannel> Glogchannels { get; set; }
         public DbSet<DiscordModLogChannel> Gmodlogchannels { get; set; }
         public DbSet<DiscordCaseNum> Casenums { get; set; }
+        public DbSet<DiscordGuildMuteRole> Gmuteroles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
