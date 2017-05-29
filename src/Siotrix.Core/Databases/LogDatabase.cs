@@ -36,6 +36,8 @@ namespace Siotrix
         public DbSet<DiscordGuildMuteRole> Gmuteroles { get; set; }
         public DbSet<DiscordGuildMuteList> Gmutelists { get; set; }
         public DbSet<DiscordGuildSpamInfo> Gspams { get; set; }
+        public DbSet<DiscordGuildWarnInfo> Gwarns { get; set; }
+        public DbSet<DiscordGuildWarningUser> Gwarningusers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
