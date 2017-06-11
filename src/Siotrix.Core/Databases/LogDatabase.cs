@@ -38,6 +38,8 @@ namespace Siotrix
         public DbSet<DiscordGuildSpamInfo> Gspams { get; set; }
         public DbSet<DiscordGuildWarnInfo> Gwarns { get; set; }
         public DbSet<DiscordGuildWarningUser> Gwarningusers { get; set; }
+        public DbSet<DiscordWarningInfo> Warninginfos { get; set; }
+        public DbSet<DiscordGuildFilterList> Gfilterlists { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {

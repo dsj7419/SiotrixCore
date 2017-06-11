@@ -15,5 +15,6 @@ namespace Siotrix
         public string Reason { get; set; }
         [Required]
         public DateTime CreatedAt { get; set; }
+        public long ModId { get; set; }
     }
 }
