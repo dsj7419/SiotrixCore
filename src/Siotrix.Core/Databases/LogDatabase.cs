@@ -30,8 +30,8 @@ namespace Siotrix
         public DbSet<DiscordGuildMotd> Gmotds { get; set; }
         public DbSet<DiscordGuildToggle> Gtoggles { get; set; }
         public DbSet<DiscordGuildToggleChannel> Gtogglechannels { get; set; }
-        public DbSet<DiscordLogChannel> Glogchannels { get; set; }
-        public DbSet<DiscordModLogChannel> Gmodlogchannels { get; set; }
+        public DbSet<DiscordGuildLogChannel> Glogchannels { get; set; }
+        public DbSet<DiscordGuildModLogChannel> Gmodlogchannels { get; set; }
         public DbSet<DiscordCaseNum> Casenums { get; set; }
         public DbSet<DiscordGuildMuteRole> Gmuteroles { get; set; }
         public DbSet<DiscordGuildMuteList> Gmutelists { get; set; }
