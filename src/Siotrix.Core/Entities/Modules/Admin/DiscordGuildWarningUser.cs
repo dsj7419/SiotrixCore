@@ -11,10 +11,14 @@ namespace Siotrix
         [Required]
         public long GuildId { get; set; }
         [Required]
-        public int Level { get; set; }
+        public int PointNum { get; set; }
         public string Reason { get; set; }
         [Required]
         public DateTime CreatedAt { get; set; }
         public long ModId { get; set; }
+        [Required]
+        public string Type { get; set; }
+        [Required]
+        public int Index { get; set; }
     }
 }

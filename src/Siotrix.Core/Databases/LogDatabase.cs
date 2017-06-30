@@ -38,12 +38,12 @@ namespace Siotrix
         public DbSet<DiscordGuildSpamInfo> Gspams { get; set; }
         public DbSet<DiscordGuildWarnInfo> Gwarns { get; set; }
         public DbSet<DiscordGuildWarningUser> Gwarningusers { get; set; }
-        public DbSet<DiscordWarningInfo> Warninginfos { get; set; }
         public DbSet<DiscordGuildFilterList> Gfilterlists { get; set; }
         public DbSet<DiscordBanGuildList> Banguildlists { get; set; }
         public DbSet<DiscordGuildAutoDelete> Gautodeletes { get; set; }
-        public DbSet<DiscordGuildAnnounceToggle> Gannouncetoggles { get; set; }
+        public DbSet<DiscordGuildAnnounceToggleOrDM> Gannouncetoggles { get; set; }
         public DbSet<DiscordGuildAnnounceMessage> Gannouncemessages { get; set; }
+        public DbSet<DiscordGuildAnnounceChannel> Gannouncechannels { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
