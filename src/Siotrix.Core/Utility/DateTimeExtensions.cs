@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Siotrix
 {
-    public static class DateTimeExtensions
+  /*  public static class DateTimeExtensions
     {
         public static DateTime FirstDayOfWeek(this DateTime dt)
         {
@@ -38,5 +38,5 @@ namespace Siotrix
         {
             return dt.FirstDayOfMonth().AddMonths(1);
         }
-    }
+    } */
 }
