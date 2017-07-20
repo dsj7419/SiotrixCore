@@ -44,6 +44,8 @@ namespace Siotrix
         public DbSet<DiscordGuildAnnounceToggleOrDM> Gannouncetoggles { get; set; }
         public DbSet<DiscordGuildAnnounceMessage> Gannouncemessages { get; set; }
         public DbSet<DiscordGuildAnnounceChannel> Gannouncechannels { get; set; }
+        public DbSet<Tag> Tags { get; private set; }
+        public DbSet<TagLog> TagsLogs { get; private set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
