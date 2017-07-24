@@ -5,16 +5,16 @@ namespace Siotrix
     public class TagLog : Entity
     {
         public DateTime Timestamp { get; private set; } = DateTime.UtcNow;
-        public ulong GuildId { get; private set; }
-        public ulong ChannelId { get; private set; }
-        public ulong UserId { get; private set; }
-        public ulong TagId { get; private set; }
+        public long GuildId { get; private set; }
+        public long ChannelId { get; private set; }
+        public long UserId { get; private set; }
+        public long TagId { get; private set; }
 
         // Foreign Keys
         public Tag Tag { get; private set; }
 
         public TagLog() { }
-        public TagLog(ulong tagId, ulong guildId, ulong channelId, ulong userId)
+        public TagLog(long tagId, long guildId, long channelId, long userId)
         {
             TagId = tagId;
             GuildId = guildId;

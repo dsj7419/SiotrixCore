@@ -11,25 +11,18 @@ namespace Siotrix
     {
         public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; private set; } = DateTime.UtcNow;
-        public ulong OwnerId { get; private set; }
-        public ulong GuildId { get; private set; }
+        public long OwnerId { get; private set; }
+        public long GuildId { get; private set; }
         public string Content { get; private set; }
-        public string Names
-        {
-            get { return JsonConvert.SerializeObject(Aliases); }
-            set { Aliases = JsonConvert.DeserializeObject<List<string>>(value); }
-        }
-
-        [NotMapped]
-        public List<string> Aliases { get; private set; }
+        public string Name { get; private set; }
 
         // Foreign Keys
         public List<TagLog> Logs { get; private set; }
 
         public Tag() { }
-        public Tag(string name, string content, ulong guildId, ulong ownerId)
+        public Tag(string name, string content, long guildId, long ownerId)
         {
-            Aliases = new List<string> { name };
+            Name = name;
             Content = content;
             GuildId = guildId;
             OwnerId = ownerId;
@@ -38,7 +31,7 @@ namespace Siotrix
         internal void ResetUpdatedAt()
             => UpdatedAt = DateTime.UtcNow;
 
-        public void SetOwnerId(ulong ownerId)
+        public void SetOwnerId(long ownerId)
         {
             OwnerId = ownerId;
             ResetUpdatedAt();
@@ -47,19 +40,6 @@ namespace Siotrix
         public void SetContent(string content)
         {
             Content = content;
-            ResetUpdatedAt();
-        }
-
-        public void AddNames(string[] names)
-        {
-            Aliases.AddRange(names);
-            ResetUpdatedAt();
-        }
-
-        public void RemoveNames(string[] names)
-        {
-            foreach (var name in names)
-                Aliases.Remove(name);
             ResetUpdatedAt();
         }
     }
