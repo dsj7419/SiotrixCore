@@ -46,6 +46,9 @@ namespace Siotrix
         public DbSet<DiscordGuildAnnounceChannel> Gannouncechannels { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<TagLog> TagsLogs { get; set; }
+        public DbSet<DiscordGuildAntilink> Antilink { get; set; }
+        public DbSet<DiscordGuildAntilinkChannelList> AntilinkChannels { get; set; }
+        public DbSet<DiscordGuildAntilinkUserList> Antilinkusers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
