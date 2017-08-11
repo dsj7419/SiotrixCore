@@ -40,7 +40,7 @@ namespace Siotrix
         public DbSet<DiscordGuildFilterList> Gfilterlists { get; set; }
         public DbSet<DiscordBanGuildList> Banguildlists { get; set; }
         public DbSet<DiscordGuildAutoDelete> Gautodeletes { get; set; }
-        public DbSet<DiscordGuildAnnounceToggleOrDM> Gannouncetoggles { get; set; }
+        public DbSet<DiscordGuildAnnounceToggleOrDm> Gannouncetoggles { get; set; }
         public DbSet<DiscordGuildAnnounceMessage> Gannouncemessages { get; set; }
         public DbSet<DiscordGuildAnnounceChannel> Gannouncechannels { get; set; }
         public DbSet<Tag> Tags { get; set; }

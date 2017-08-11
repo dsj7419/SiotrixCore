@@ -1,53 +1,16 @@
 ﻿using System;
 
-namespace Siotrix  
+namespace Siotrix
 {
-    public class RGBtoHex
+    public class RgBtoHex
     {
-        public struct RGB
+        public static string RgbToHexadecimal(Rgb rgb)
         {
-            private byte _r;
-            private byte _g;
-            private byte _b;
+            var rs = DecimalToHexadecimal(rgb.R);
+            var gs = DecimalToHexadecimal(rgb.G);
+            var bs = DecimalToHexadecimal(rgb.B);
 
-            public RGB(byte r, byte g, byte b)
-            {
-                _r = r;
-                _g = g;
-                _b = b;
-            }
-
-            public byte R
-            {
-                get { return _r; }
-                set { _r = value; }
-            }
-
-            public byte G
-            {
-                get { return _g; }
-                set { _g = value; }
-            }
-
-            public byte B
-            {
-                get { return _b; }
-                set { _b = value; }
-            }
-
-            public bool Equals(RGB rgb)
-            {
-                return (R == rgb.R) && (G == rgb.G) && (B == rgb.B);
-            }
-        }
-
-        public static string RGBToHexadecimal(RGB rgb)
-        {
-            string rs = DecimalToHexadecimal(rgb.R);
-            string gs = DecimalToHexadecimal(rgb.G);
-            string bs = DecimalToHexadecimal(rgb.B);
-
-            if(rs.Length == 1)
+            if (rs.Length == 1)
                 rs = '0' + rs;
 
             if (gs.Length == 1)
@@ -64,22 +27,43 @@ namespace Siotrix
             if (dec <= 0)
                 return "00";
 
-            int hex = dec;
-            string hexStr = string.Empty;
+            var hex = dec;
+            var hexStr = string.Empty;
 
             while (dec > 0)
             {
-                hex = dec % 16;           
+                hex = dec % 16;
 
                 if (hex < 10)
                     hexStr = hexStr.Insert(0, Convert.ToChar(hex + 48).ToString());
                 else
                     hexStr = hexStr.Insert(0, Convert.ToChar(hex + 55).ToString());
 
-                dec /= 16;              
+                dec /= 16;
             }
 
             return hexStr;
+        }
+
+        public struct Rgb
+        {
+            public Rgb(byte r, byte g, byte b)
+            {
+                R = r;
+                G = g;
+                B = b;
+            }
+
+            public byte R { get; set; }
+
+            public byte G { get; set; }
+
+            public byte B { get; set; }
+
+            public bool Equals(Rgb rgb)
+            {
+                return R == rgb.R && G == rgb.G && B == rgb.B;
+            }
         }
     }
 }
