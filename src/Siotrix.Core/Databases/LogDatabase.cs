@@ -14,7 +14,6 @@ namespace Siotrix
         public DbSet<DiscordReaction> Reactions { get; set; }
         public DbSet<DiscordMembership> Memberships { get; set; }
         public DbSet<DiscordStatus> Statuses { get; set; }
-        public DbSet<DiscordColorInfo> Colorinfos { get; set; }
         public DbSet<DiscordColor> Gcolors { get; set; }
         public DbSet<DiscordGuildFooter> Gfooters { get; set; }
         public DbSet<DiscordAuthor> Authors { get; set; }
@@ -54,6 +53,7 @@ namespace Siotrix
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             var config = ConfigurationBase.Load<ConfigurationBase>();
+
             string connection = $"server={config.Server};" +
                 $"userid={config.User};" +
                 $"pwd={config.Password};" +
