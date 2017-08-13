@@ -6,7 +6,27 @@ namespace Siotrix
 {
     public class DiscordSiotrixFooter : Entity
     {
-        public string FooterText { get; set; }
-        public string FooterIcon { get; set; }
+        [Required]
+        public string FooterText { get; private set; }
+        [Required]
+        public string FooterIcon { get; private set; }
+
+        public DiscordSiotrixFooter() {}
+
+        public DiscordSiotrixFooter(string footerText, string footerIcon)
+        {
+            FooterText = footerText;
+            FooterIcon = footerIcon;
+        }
+
+        public void SetFooterText(string footerText)
+        {
+            FooterText = footerText;
+        }
+
+        public void SetFooterIcon(string footerIcon)
+        {
+            FooterIcon = footerIcon;
+        }
     }
 }

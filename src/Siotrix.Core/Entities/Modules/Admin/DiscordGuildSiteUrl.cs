@@ -6,7 +6,22 @@ namespace Siotrix
 {
     public class DiscordGuildSiteUrl : Entity
     {
-        public string SiteUrl { get; set; }
+        [Required]
+        public string SiteUrl { get; private set; }
+        [Required]
         public long GuildId { get; set; }
+
+        public DiscordGuildSiteUrl() { }
+
+        public DiscordGuildSiteUrl(long guildId, string siteUrl)
+        {
+            GuildId = guildId;
+            SiteUrl = siteUrl;
+        }
+
+        public void SetSiteUrl(string siteUrl)
+        {
+            SiteUrl = siteUrl;
+        }
     }
 }

@@ -6,7 +6,22 @@ namespace Siotrix
 {
     public class DiscordGuildAvatar : Entity
     {
-        public long GuildId { get; set; }
-        public string Avatar { get; set; }
+        [Required]
+        public long GuildId { get; private set; }
+        [Required]
+        public string Avatar { get; private set; }
+
+        public DiscordGuildAvatar() { }
+
+        public DiscordGuildAvatar(long guildId, string avatar)
+        {
+            GuildId = guildId;
+            Avatar = avatar;
+        }
+
+        public void SetGuildAvatar(string avatar)
+        {
+            Avatar = avatar;
+        }
     }
 }
