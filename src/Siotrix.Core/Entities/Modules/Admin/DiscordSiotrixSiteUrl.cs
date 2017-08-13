@@ -6,7 +6,7 @@ namespace Siotrix
 {
     public class DiscordSiotrixSiteUrl : Entity
     {
-        public string SiteUrl { get; set; }
+        public string SiteUrl { get; private set; }
 
         public DiscordSiotrixSiteUrl() { }
 
