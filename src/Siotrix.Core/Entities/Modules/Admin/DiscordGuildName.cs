@@ -6,7 +6,9 @@ namespace Siotrix
 {
     public class DiscordGuildName : Entity
     {
+        [Required]
         public long GuildId { get; set; }
+        [Required]
         public string GuildName { get; private set; }
 
         public DiscordGuildName() { }
