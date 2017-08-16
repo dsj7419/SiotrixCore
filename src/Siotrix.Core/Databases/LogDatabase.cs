@@ -49,6 +49,7 @@ namespace Siotrix
         public DbSet<DiscordGuildAntilinkChannelList> AntilinkChannels { get; set; }
         public DbSet<DiscordGuildAntilinkUserList> Antilinkusers { get; set; }
         public DbSet<DiscordGuildBlacklist> Blacklist { get; set; }
+        public DbSet<DiscordGuildLogsToggle> LogsToggle { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
