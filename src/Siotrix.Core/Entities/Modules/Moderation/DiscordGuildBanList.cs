@@ -4,29 +4,29 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Siotrix
 {
-    public class DiscordGuildMuteList : Entity
+    public class DiscordGuildBanList : Entity
     {
         [Required]
         public long GuildId { get; private set; }
         [Required]
         public long UserId { get; private set; }
-        public int MuteTime{ get; private set; }
+        public int BanTime { get; private set; }
         [Required]
-        public int CaseId { get; private set; }
+        public long CaseId { get; private set; }
 
-        public DiscordGuildMuteList() { }
+        public DiscordGuildBanList() { }
 
-        public DiscordGuildMuteList(int caseId, long guildId, long userId, int muteTime)
+        public DiscordGuildBanList(long caseId, long guildId, long userId, int banTime)
         {
             CaseId = caseId;
             GuildId = guildId;
             UserId = userId;
-            MuteTime = muteTime;
+            BanTime = banTime;
         }
 
-        public void SetMuteTime(int muteTime)
+        public void SetBanTime(int banTime)
         {
-            MuteTime = muteTime;
+            BanTime = banTime;
         }
     }
 }

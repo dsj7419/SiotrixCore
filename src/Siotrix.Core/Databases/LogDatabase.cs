@@ -31,12 +31,14 @@ namespace Siotrix
         public DbSet<DiscordGuildToggleChannel> Gtogglechannels { get; set; }
         public DbSet<DiscordGuildLogChannel> Glogchannels { get; set; }
         public DbSet<DiscordGuildModLogChannel> Gmodlogchannels { get; set; }
-        public DbSet<DiscordCaseNum> Casenums { get; set; }
         public DbSet<DiscordGuildMuteRole> Gmuteroles { get; set; }
         public DbSet<DiscordGuildMuteList> Gmutelists { get; set; }
+        public DbSet<DiscordGuildBanList> Gbanlists { get; set; }
+        public DbSet<DiscordGuildWarnList> Gwarnlists { get; set; }
         public DbSet<DiscordGuildSpamInfo> Gspams { get; set; }
-        public DbSet<DiscordGuildWarnInfo> Gwarns { get; set; }
-        public DbSet<DiscordGuildWarningUser> Gwarningusers { get; set; }
+        public DbSet<DiscordGuildWarnSettings> Gwarnsettings { get; set; }
+        public DbSet<DiscordGuildUserCases> Gusercases { get; set; }
+        public DbSet<DiscordGuilUserCaseTracking> Gusercasetracking { get; set; }
         public DbSet<DiscordGuildFilterList> Gfilterlists { get; set; }
         public DbSet<DiscordBanGuildList> Banguildlists { get; set; }
         public DbSet<DiscordGuildAutoDelete> Gautodeletes { get; set; }
